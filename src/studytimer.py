@@ -8,7 +8,12 @@
 
 import time
 import sys
+import os
 from playsound3 import playsound
+
+# alarm path
+
+alarm_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "alarm.mp3")
 
 # color variables
 
@@ -23,7 +28,6 @@ color_reset = "\033[0m"
 # Enable ANSI escape codes on Windows (not needed on Linux/Mac)
 
 if sys.platform == "win32":
-    import os
     os.system("")
     
 # title
@@ -79,7 +83,7 @@ try :
         # Activate alarm
 
         while True :
-            playsound("alarm.mp3")
+            playsound(alarm_path)
         
 # If the user presses Ctrl+C
 
