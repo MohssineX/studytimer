@@ -1,15 +1,16 @@
 # ⏳ studytimer
 
-A lightweight terminal study timer with an audible alarm.
+A lightweight terminal study timer with a built-in audible alarm.
 
 ## Features
 
 * Countdown timer for study sessions
 * Displays remaining time in `HH:MM:SS` format
-* Color-coded terminal output
+* Colorized terminal interface
 * Audible alarm when the timer reaches zero
-* Simple and interactive terminal interface
-* Supports Linux and Windows
+* Supports study sessions up to 24 hours
+* Built-in input validation and error handling
+* Works on Linux and Windows
 
 ## Requirements
 
@@ -23,10 +24,16 @@ git clone https://github.com/MohssineX/studytimer.git
 cd studytimer
 ```
 
-Install the required dependency:
+Install dependencies:
 
 ```bash
 pip install -r requirements.txt
+```
+
+Or:
+
+```bash
+pip install playsound3
 ```
 
 ## Usage
@@ -45,27 +52,29 @@ python3 studytimer.py
 
 ## How It Works
 
-1. Enter the desired study time in minutes
-2. The countdown begins immediately
-3. The remaining time is displayed in real time
-4. When the timer reaches zero, an alarm sound starts playing
-5. Press `Ctrl + C` to stop the alarm and exit
+1. Start the program
+2. Enter a study duration in minutes
+3. The countdown begins immediately
+4. The remaining time is displayed in real time
+5. When the timer reaches zero, an alarm starts playing
+6. Press `Ctrl+C` to stop the alarm and exit
 
-## Error Handling
+## Error Codes
 
-| Error | Description                          |
-| ----- | ------------------------------------ |
-| err   | Invalid input (integer numbers only) |
+| Code   | Description                                     |
+| ------ | ----------------------------------------------- |
+| err101 | Invalid timer (maximum allowed is 1440 minutes) |
+| err102 | Invalid input (integer numbers only)            |
 
-## Note
+## Notes
 
-`playsound3` needs a system audio backend to work.
+The alarm sound requires a working audio playback system on your device.
 
 ---
 
 ## License
 
-This project is licensed under the **MIT License**
+This project is licensed under the **MIT License**.
 
 ---
 
