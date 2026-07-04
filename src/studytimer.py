@@ -28,9 +28,6 @@ color_orange = "\033[38;2;255;165;0m"
 color_reset = "\033[0m"
 
 
-
-
-
 # Enable ANSI escape codes on Windows (not needed on Linux/Mac)
 
 if sys.platform == "win32":
@@ -117,6 +114,6 @@ try :
 
 except KeyboardInterrupt :
 
-            print("")
+            print("\n")
             print(f"{color_yellow}Thank you for using studytimer!{color_reset}")
             print(f"{color_yellow}Author : https://github.com/MohssineX{color_reset}")
