@@ -59,7 +59,7 @@ python3 studytimer.py
 
 ## Note
 
-`playsound3` needs a system audio backend to work. Most desktop Linux distros already have one, but if you get:
+`playsound3` needs a system audio backend to work.
 
 ---
 
