@@ -57,7 +57,7 @@ python3 studytimer.py
 | ----- | ------------------------------------ |
 | err   | Invalid input (integer numbers only) |
 
-## Linux note
+## Note
 
 `playsound3` needs a system audio backend to work. Most desktop Linux distros already have one, but if you get:
 
