@@ -10,8 +10,12 @@
 import sys
 import time
 import os
+import shutil
 from playsound3 import playsound
 
+# terminal size
+
+last_size = shutil.get_terminal_size()
 
 # alarm path
 
@@ -94,6 +98,11 @@ try :
             print(f"|                                {timer}                                            |")
             print(f"|                                                                                    |")
             print(f"+------------------------------------------------------------------------------------+")
+
+            current_size = shutil.get_terminal_size()
+            if current_size != last_size:
+                print("\033c", end="") 
+                last_size = current_size
 
             seconds -= 1
             time.sleep(1)
