@@ -61,10 +61,10 @@ python3 studytimer.py
 
 ## Error Codes
 
-| Code   | Description                                     |
-| ------ | ----------------------------------------------- |
-| err101 | Invalid timer (maximum allowed is 1440 minutes) |
-| err102 | Invalid input (integer numbers only)            |
+| Code   | Description                                              |
+| ------ | ---------------------------------------------------------|
+| err101 | Invalid timer Maximum allowed is 1440 minutes (24 hours) |
+| err102 | Invalid input (integer numbers only)                     |
 
 ## Notes
 
