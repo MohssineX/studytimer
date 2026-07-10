@@ -10,7 +10,7 @@ import sys
 import time
 import os
 import shutil
-from playsound3 import playsound
+import miniaudio
 
 # terminal size
 
@@ -36,17 +36,13 @@ color_reset = "\033[0m"
 if sys.platform == "win32":
     os.system("")
     
-# title
-
-title = "====================================studytimer======================================="
-
 
 try : 
 
     while True :
 
         print("\033c", end="")
-        print(f"{color_light_blue}{title}{color_reset}")
+        print(f"{color_light_blue}studytimer{color_reset}")
         print("")
         input(f"{color_pink}Welcome to studytimer Press Enter to start using studytimer : {color_reset}")
         print("")
@@ -59,14 +55,14 @@ try :
 
                 study_minutes = int(input(f"{color_yellow}Enter study time in minutes : {color_reset}"))
                 
-                if study_minutes <= 1440 :
+                if 1 <= study_minutes <= 1440 :
 
                     break
 
                 else :
 
                     print("")
-                    print(f"{color_red}err101 : Invalid timer. (Maximum allowed is 1440 minutes (24 hours)).{color_reset}")
+                    print(f"{color_red}err101 : Invalid timer. (The time must be between 1 minute and 1440 minutes(24 hours) only).{color_reset}")
                     print("")
 
             except ValueError :
@@ -88,15 +84,11 @@ try :
 
             print("\033[H", end="")
 
-            print(f"{color_light_blue}{title}{color_reset}")
+            print(f"{color_light_blue}studytimer{color_reset}")
             print("")
-            print(f"+------------------------------------------------------------------------------------+")
-            print(f"|                                                                                    |")
-            print(f"|                                {color_orange}Timer :{color_reset}                                             |")
-            print(f"|                                                                                    |")
-            print(f"|                                {timer}                                            |")
-            print(f"|                                                                                    |")
-            print(f"+------------------------------------------------------------------------------------+")
+            print(f"{color_orange}Timer :{color_reset} {timer}")
+            print("")
+            
 
             current_size = shutil.get_terminal_size()
             if current_size != last_size:
@@ -113,15 +105,32 @@ try :
 
         # Activate alarm
 
-        while True :
 
-            playsound(alarm_path)
+        while True:
+            stream = miniaudio.stream_file(alarm_path)
+            device = miniaudio.PlaybackDevice()
+            device.start(stream)
+            time.sleep(24)
+            device.stop()
+            device.close()
+            stream.close()
 
 
 # If the user presses Ctrl+C
 
 except KeyboardInterrupt :
 
+            try :
+
+                device.stop()
+                device.close()
+                stream.close()
+
+            except NameError:
+                pass
+
             print("\n")
             print(f"{color_yellow}Thank you for using studytimer!{color_reset}")
             print(f"{color_yellow}Author : https://github.com/MohssineX{color_reset}")
+
+
