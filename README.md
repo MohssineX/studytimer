@@ -15,7 +15,7 @@ A lightweight terminal study timer with a built-in audible alarm.
 ## Requirements
 
 * Python 3.x
-* playsound3
+* miniaudio
 
 ## Installation
 
@@ -33,7 +33,7 @@ pip install -r requirements.txt
 Or:
 
 ```bash
-pip install playsound3
+pip install miniaudio
 ```
 
 ## Usage
@@ -65,10 +65,6 @@ python3 studytimer.py
 | ------ | ---------------------------------------------------------|
 | err101 | Invalid timer Maximum allowed is 1440 minutes (24 hours) |
 | err102 | Invalid input (integer numbers only)                     |
-
-## Notes
-
-The alarm sound requires a working audio playback system on your device.
 
 ---
 
