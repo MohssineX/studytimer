@@ -3,6 +3,7 @@
 ![Python](https://img.shields.io/badge/python-3-blue)
 ![License](https://img.shields.io/badge/license-MIT-blue)
 
+
 A lightweight terminal study timer with a built-in audible alarm.
 
 ## Features
