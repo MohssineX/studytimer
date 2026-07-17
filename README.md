@@ -23,8 +23,10 @@ A lightweight study timer built with Python, running in the terminal with a buil
 
 ## Requirements
 
-* Python 3.10
+* Python 3.10 or later
 * miniaudio
+* Terminal with ANSI escape sequence support
+
 
 ## Installation
 
