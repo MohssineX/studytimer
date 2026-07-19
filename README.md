@@ -12,7 +12,6 @@ A lightweight study timer built with Python, running in the terminal with a buil
 * Countdown timer for study sessions
 * Supports study sessions up to 24 hours
 * Audible alarm when the timer reaches zero
-* It works on Linux, Windows, and Mac OS systems
 * Lightweight and works well on devices with limited resources
 
 ## Supported Platforms
@@ -27,8 +26,9 @@ A lightweight study timer built with Python, running in the terminal with a buil
 * miniaudio
 * Terminal with ANSI escape sequence support
 
-
 ## Installation
+
+### Clone the repository :
 
 ```bash
 git clone https://github.com/MohssineX/studytimer.git
@@ -49,7 +49,7 @@ pip install miniaudio
 
 ## Usage
 
-Run the program:
+Run the program :
 
 ```bash
 python studytimer.py
@@ -60,18 +60,6 @@ If your system uses `python3` :
 ```bash
 python3 studytimer.py
 ```
-
-## How It Works
-
-1. Start the program
-2. Enter a study duration in minutes
-3. The countdown begins immediately
-4. The remaining time is displayed in real time
-5. When the timer reaches zero, an alarm starts playing
-6. Press `Ctrl+C` to stop the alarm and exit
-
----
-
 ## License
 
 This project is licensed under the **MIT License**.
