@@ -75,7 +75,7 @@ This project is licensed under the **MIT License**.
 
 ## 🐱 Special Thanks
 
-A special thanks to mimi — the legendary, the great, the gentle cat.
+A special thanks to **mimi** — the legendary, the great, the gentle cat.
 
 ---
 
