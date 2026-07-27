@@ -9,9 +9,10 @@ A lightweight study timer built with Python, running in the terminal with a buil
 
 ## Features
 
-* Countdown timer for study sessions
-* Supports study sessions up to 24 hours
-* Audible alarm when the timer reaches zero
+* Set your own study duration, from 1 minute up to 24 hours
+* Clear, live display of remaining time during the session
+* Automatic audio alert to remind you to take a break when time's up
+* Easily stop the alarm as soon as you hear it
 * Lightweight and works well on devices with limited resources
 
 ## Supported Platforms
