@@ -26,7 +26,6 @@ color_pink = "\033[95m"
 color_orange = "\033[38;2;255;165;0m"
 color_reset = "\033[0m"
 
-
 # Enable ANSI escape codes on Windows (not needed on Linux/Mac)
 if sys.platform == "win32":
     os.system("")
