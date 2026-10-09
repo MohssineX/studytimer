@@ -5,7 +5,6 @@
 # Copyright (C) 2026 Mohssine <https://github.com/MohssineX>
 
 # import libraries
-
 import sys
 import time
 import os
@@ -13,15 +12,12 @@ import shutil
 import miniaudio
 
 # terminal size
-
 last_size = shutil.get_terminal_size()
 
 # alarm path
-
 alarm_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "alarm.mp3")
 
 # color variables
-
 color_red = "\033[31m"
 color_green = "\033[32m"
 color_yellow = "\033[33m"
@@ -32,41 +28,30 @@ color_reset = "\033[0m"
 
 
 # Enable ANSI escape codes on Windows (not needed on Linux/Mac)
-
 if sys.platform == "win32":
     os.system("")
     
-
-try : 
-
-    while True :
-
+try: 
+    while True:
         print("\033c", end="")
         print(f"{color_light_blue}studytimer{color_reset}")
         print("")
         input(f"{color_pink}Welcome to studytimer Press Enter to start using studytimer : {color_reset}")
         print("")
-
-
-
-        while True :
-
+        
+        while True:
             try:
-
                 study_minutes = int(input(f"{color_yellow}Enter study time in minutes : {color_reset}"))
                 
-                if 1 <= study_minutes <= 1440 :
-
+                if 1 <= study_minutes <= 1440:
                     break
 
-                else :
-
+                else:
                     print("")
                     print(f"{color_red}err101 : Invalid timer. (The time must be between 1 minute and 1440 minutes(24 hours) only).{color_reset}")
                     print("")
 
-            except ValueError :
-
+            except ValueError:
                 print("")
                 print(f"{color_red}err102 : Invalid input. (Integer numbers only).{color_reset}")
                 print("")
@@ -76,7 +61,6 @@ try :
         seconds = study_minutes * 60
 
         while seconds > 0:
-
             hours = seconds // 3600
             minutes = (seconds % 3600) // 60
             remaining_seconds = seconds % 60
@@ -89,7 +73,6 @@ try :
             print(f"{color_orange}Timer :{color_reset} {timer}")
             print("")
             
-
             current_size = shutil.get_terminal_size()
             if current_size != last_size:
                 print("\033c", end="") 
@@ -104,8 +87,6 @@ try :
         print("Press'Ctrl+C'to stop alarm.")
 
         # Activate alarm
-
-
         while True:
             stream = miniaudio.stream_file(alarm_path)
             device = miniaudio.PlaybackDevice()
@@ -115,13 +96,9 @@ try :
             device.close()
             stream.close()
 
-
 # If the user presses Ctrl+C
-
-except KeyboardInterrupt :
-
-            try :
-
+except KeyboardInterrupt:
+            try:
                 device.stop()
                 device.close()
                 stream.close()
@@ -132,5 +109,3 @@ except KeyboardInterrupt :
             print("\n")
             print(f"{color_yellow}Thank you for using studytimer!{color_reset}")
             print(f"{color_yellow}Author : https://github.com/MohssineX{color_reset}")
-
-
