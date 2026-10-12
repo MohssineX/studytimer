@@ -2,6 +2,7 @@
 
 ![Python](https://img.shields.io/badge/python-3-blue)
 ![License](https://img.shields.io/badge/license-MIT-blue)
+![Stars](https://img.shields.io/github/stars/MohssineX/studytimer?style=social)
 
 A lightweight study timer built with Python, running in the terminal with a built-in audible alarm and low resource usage.
 
