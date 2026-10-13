@@ -54,6 +54,10 @@ pip install miniaudio
 Run the program :
 
 ```bash
+cd src
+```
+
+```bash
 python studytimer.py
 ```
 
